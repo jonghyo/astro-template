@@ -1,32 +1,31 @@
 root: true
 env:
-    browser: true
-    es2021: true
-    node: true
+  browser: true
+  es2021: true
+  node: true
 extends:
-    - eslint:recommended
-    - plugin:@typescript-eslint/recommended
-    - prettier
-parser: '@typescript-eslint/parser'
+  - eslint:recommended
+  - plugin:@typescript-eslint/recommended
+  - prettier
+parser: "@typescript-eslint/parser"
 parserOptions:
-    sourceType: module
+  sourceType: module
 plugins:
-    - '@typescript-eslint'
-    - 'import'
+  - "@typescript-eslint"
 rules:
-    '@typescript-eslint/no-empty-function': off
-    '@typescript-eslint/array-type': warn
+  "@typescript-eslint/no-empty-function": off
+  "@typescript-eslint/array-type": warn
 overrides:
-    - files:
-        - '*.{jsx,tsx}'
-      extends:
-        - plugin:react/recommended
-        - plugin:react/jsx-runtime
-        - plugin:react-hooks/recommended
-    - files:
-        - '*.astro'
-      extends:
-        - plugin:astro/recommended
-      parserOptions:
-        parser:  @typescript-eslint/parser
-        extraFileExtensions: [".astro"]
+  - files:
+      - "*.{jsx,tsx}"
+    extends:
+      - plugin:react/recommended
+      - plugin:react/jsx-runtime
+      - plugin:react-hooks/recommended
+  - files:
+      - "*.astro"
+    extends:
+      - plugin:astro/recommended
+    parserOptions:
+      parser: "@typescript-eslint/parser"
+      extraFileExtensions: [".astro"]
